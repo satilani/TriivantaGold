@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIIVANTA GOLD | Coming Soon</title>
+  <meta name="description" content="TRIIVANTA GOLD Township Project - Coming Soon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #080B11;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+      background-image: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.08) 0%, rgba(8, 11, 17, 1) 75%);
+    }
+
+    header {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: center;
+      padding-top: 1rem;
+      z-index: 10;
+    }
+
+    .brand-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-emblem {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      background-color: #101624;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    }
+
+    .logo-emblem span {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: #D4AF37;
+      font-size: 1.15rem;
+      letter-spacing: 0.1em;
+    }
+
+    .brand-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: 0.3em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    .brand-name .gold {
+      color: #D4AF37;
+    }
+
+    main {
+      width: 100%;
+      max-width: 680px;
+      text-align: center;
+      margin: auto 0;
+      padding: 3rem 1rem;
+      z-index: 10;
+    }
+
+    .tagline-badge {
+      display: inline-block;
+      padding: 0.35rem 1.25rem;
+      background-color: #101726;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 9999px;
+      color: #D4AF37;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      margin-bottom: 1.75rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: #FFFFFF;
+    }
+
+    .gold-gradient {
+      background: linear-gradient(135deg, #FFF7D6 0%, #E6C875 35%, #D4AF37 70%, #997328 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: #CBD5E1;
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .notify-box {
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+      gap: 0.6rem;
+    }
+
+    @media (max-width: 560px) {
+      form {
+        flex-direction: column;
+      }
+    }
+
+    input[type="email"] {
+      flex: 1;
+      padding: 0.85rem 1.15rem;
+      border-radius: 6px;
+      background-color: #0D1422;
+      border: 1px solid #334155;
+      color: #FFFFFF;
+      font-size: 0.875rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    input[type="email"]::placeholder {
+      color: #64748B;
+    }
+
+    input[type="email"]:focus {
+      border-color: #D4AF37;
+    }
+
+    button {
+      padding: 0.85rem 1.5rem;
+      border-radius: 6px;
+      border: none;
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8232 100%);
+      color: #080B11;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      cursor: pointer;
+      transition: filter 0.2s ease, transform 0.1s ease;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      filter: brightness(1.1);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .notify-caption {
+      font-size: 0.75rem;
+      color: #64748B;
+      margin-top: 0.75rem;
+      font-weight: 400;
+    }
+
+    .success-message {
+      display: none;
+      padding: 1rem;
+      background-color: #0F1A2A;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      border-radius: 6px;
+      color: #6EE7B7;
+      font-size: 0.875rem;
+    }
+
+    footer {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(51, 65, 85, 0.4);
+      font-size: 0.75rem;
+      color: #64748B;
+      z-index: 10;
+    }
+
+    @media (max-width: 560px) {
+      footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+
+    .contact-email {
+      color: #CBD5E1;
+      text-decoration: none;
+      font-family: monospace;
+      transition: color 0.2s ease;
+    }
+
+    .contact-email:hover {
+      color: #D4AF37;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-container">
+      <div class="logo-emblem">
+        <span>TG</span>
+      </div>
+      <div class="brand-name">
+        TRIIVANTA <span class="gold">GOLD</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="tagline-badge">Township Project</div>
+
+    <h1>COMING <span class="gold-gradient">SOON</span></h1>
+
+    <p class="subtitle">
+      Something extraordinary is on the horizon. A distinguished new landmark is in the making.
+    </p>
+
+    <div class="notify-box">
+      <div id="success-box" class="success-message">
+        ✓ Thank you. We will notify you upon official unveiling.
+      </div>
+
+      <form id="notify-form">
+        <input type="email" id="email-input" placeholder="Enter your email to stay informed..." required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <div class="notify-caption">Register your interest to receive launch updates.</div>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      Inquiries: <a href="mailto:info@triivantagold.com" class="contact-email">info@triivantagold.com</a>
+    </div>
+    <div>
+      &copy; 2026 TRIIVANTA GOLD. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('notify-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('email-input').value;
+      if (email) {
+        document.getElementById('notify-form').style.display = 'none';
+        document.querySelector('.notify-caption').style.display = 'none';
+        document.getElementById('success-box').style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
